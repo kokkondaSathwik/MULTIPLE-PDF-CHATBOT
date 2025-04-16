@@ -1,7 +1,7 @@
 
 # Multiple PDF Chatbot 🤖
 
-![Screenshot](https://your-image-link.com) <!-- Replace with actual image URL -->
+![Screenshot](https://github.com/kokkondaSathwik/MULTIPLE-PDF-CHATBOT/blob/main/intro.jpg?raw=true) <!-- Replace with actual image URL -->
 
 ---
 
@@ -76,7 +76,7 @@ Handling similar queries across documents | Added indexing per document to isola
 
 ## 📄 Example Use Case
 
-![Screenshot](https://your-image-link.com) <!-- Replace with actual image URL -->
+![Screenshot](https://github.com/kokkondaSathwik/MULTIPLE-PDF-CHATBOT/blob/main/result.jpg?raw=true) <!-- Replace with actual image URL -->
 
 *Example Query:*  
 **“What is Citizenship at the commencement of the Constitution?”**
