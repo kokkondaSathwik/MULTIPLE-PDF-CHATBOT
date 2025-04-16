@@ -1,89 +1,118 @@
-# Chat with Multiple PDFs 📚
 
-A powerful Streamlit application that allows you to chat with multiple PDF documents using Google's Gemini Pro AI model. Upload your PDFs and ask questions to get instant, relevant answers from your documents.
+# Multiple PDF Chatbot 🤖
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-red.svg)
-![Google Gemini](https://img.shields.io/badge/Google-Gemini_Pro-green.svg)
+![Screenshot](https://your-image-link.com) <!-- Replace with actual image URL -->
 
-## ✨ Features
+---
 
-- 📄 Upload multiple PDF documents
-- 💬 Interactive chat interface
-- 🤖 Powered by Google's Gemini Pro AI
-- 🔍 Intelligent document search
-- 🎯 Precise answer extraction
-- 🚀 Real-time responses
-- 🎨 Beautiful user interface
+## 🌍 Overview
 
-## 🛠️ Installation
+The **Multiple PDF Chatbot 🤖** is an AI-powered application that allows users to **interact with one or more PDF documents** using natural language. It helps you **ask questions, extract insights, and summarize** content from complex or lengthy PDFs in real-time.
 
-1. Clone the repository:
+### ✨ Key Highlights
+- 📂 **Upload and interact with multiple PDFs** at once  
+- 💬 **Ask natural language questions** about your documents' content  
+- 🧠 **Context-aware answers** powered by AI  
+- 📄 **Generate summaries** of lengthy documents  
+- 🖼️ **OCR support** for scanned/image-based PDFs  
+- ⚡ **Fast and real-time responses** with LangChain & FAISS  
+- 🖥️ **User-friendly Streamlit UI**
+
+---
+
+## 🔧 Tech Stack
+
+| 🧩 **Layer**          | 🔧 **Tools & Libraries**                                                                 |
+|-----------------------|------------------------------------------------------------------------------------------|
+| 🎨 **Frontend**       | `Streamlit`                                                                              |
+| 🧠 **Backend**        | `Python`                                                                                 |
+| 📚 **Core Libraries** | `LangChain`, `PyPDF2`, `FAISS`, `OpenAI API`, `pytesseract` (OCR)                        |
+| 🗂️ **Text Embedding** | `FAISS` for semantic similarity search                                                   |
+| 📑 **PDF Handling**   | `PyPDF2` for parsing, `pytesseract` for OCR on scanned documents                         |
+
+---
+
+## 📊 Features
+
+- ✅ **Upload and read multiple PDFs** simultaneously  
+- ✅ **Ask questions** directly from the uploaded files  
+- ✅ **Generate summaries** of lengthy documents  
+- ✅ **OCR Support** for scanned PDFs (toggle option)  
+- ✅ **Real-time responses** with context-based answers powered by OpenAI API
+
+---
+
+## 📱 How It Works
+
+1. 📤 **Upload PDF files** (supports scanned and text PDFs)  
+2. ❓ **Ask questions** like “Summarize chapter 4” or “What’s the definition of X?”  
+3. 🔍 **LangChain** splits documents into chunks and indexes them with **FAISS**  
+4. 🤖 The chatbot uses **OpenAI GPT** to generate an accurate, contextual response  
+5. 💬 Responses are presented in a conversational interface for better readability  
+
+---
+
+## 🚫 Challenges & ✔️ Solutions
+
+Challenge | Solution  
+--- | ---  
+Parsing large PDFs and scanned documents | Integrated PyPDF2 and optional OCR support with pytesseract  
+Maintaining contextual accuracy in answers | Used FAISS for better similarity search and LangChain for context management  
+Real-time performance with multiple files | Optimized embeddings and memory handling in LangChain  
+Handling similar queries across documents | Added indexing per document to isolate results  
+
+---
+
+## 🚀 Future Enhancements
+
+- 🔐 **User Login & Profiles** to save chat and document history  
+- 🧠 **Long-term Memory** for ongoing conversation threads  
+- 🌐 **Multilingual Support** for global users  
+- 📝 **Highlight Source Text** in PDF viewer alongside answers  
+- 📤 **Export Options** for summaries in PDF or CSV formats  
+- 📊 **Analytics Dashboard** for document statistics and trends  
+
+---
+
+## 📄 Example Use Case
+
+![Screenshot](https://your-image-link.com) <!-- Replace with actual image URL -->
+
+*Example Query:*  
+**“What is Citizenship at the commencement of the Constitution?”**
+
+**Bot Responds:**  
+> "Pakistan shall be deemed to be a citizen of India at the commencement of this Constitution if..."
+
+---
+
+## 🚀 Get Started
+
 ```bash
-git clone https://github.com/yourusername/multiple-pdf-chatbot.git
-cd multiple-pdf-chatbot
-```
-
-2. Install required packages:
-```bash
+git clone https://github.com/kokkondaSathwik/MULTIPLE-PDF-CHATBOT
+cd MULTIPLE-PDF-CHATBOT
 pip install -r requirements.txt
-```
-
-3. Set up your Google API key:
-   - Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Create a new API key
-   - Create a `.env` file in the project root
-   - Add your API key:
-     ```
-     GOOGLE_API_KEY=your_api_key_here
-     ```
-
-## 🚀 Usage
-
-1. Start the application:
-```bash
 streamlit run app.py
 ```
 
-2. Open your web browser and go to `http://localhost:8501`
+---
 
-3. Use the application:
-   - Click "Test API Connection" to verify your API key
-   - Upload your PDF documents using the sidebar
-   - Click "Process Documents" to analyze the PDFs
-   - Start asking questions about your documents!
+## 📢 Contributions & Feedback
 
-## 💡 Example Questions
-
-- "What are the main points in the document?"
-- "Can you summarize chapter 3?"
-- "What does the document say about [specific topic]?"
-- "Find all mentions of [keyword] in the documents."
-
-## 🔧 Troubleshooting
-
-- **API Key Issues**: Make sure your API key is correctly set in the `.env` file
-- **PDF Processing Errors**: Ensure your PDFs are text-based and not scanned images
-- **Model Errors**: Verify that you have enabled the Gemini API in your Google Cloud Console
-
-## 🛡️ Dependencies
-
-- streamlit==1.32.0
-- PyPDF2==3.0.1
-- google-generativeai==0.3.2
-- python-dotenv==1.0.1
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Contact
-
-If you have any questions or suggestions, please open an issue in the repository.
+We welcome contributions, issues, and feature requests!  
+- 🛠️ Create an Issue  
+- 🔁 Fork and submit a Pull Request  
+- 📧 Email: [sathwikkokkonda997@gmail.com](mailto:sathwikkokkonda997@gmail.com)
 
 ---
-Made with ❤️ using Streamlit and Google Gemini Pro
+
+## 📄 License
+
+Licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to the open-source libraries and tools:  
+**LangChain**, **OpenAI**, **FAISS**, **Streamlit**, **PyPDF2**, **pytesseract**, and all contributors who inspired this idea.
